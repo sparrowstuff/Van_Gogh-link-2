@@ -2,7 +2,7 @@
 	padding: 0 0 6.25rem;
 
 	&__main-wrapper {
-		@include flexCenter(row, center, unset);
+		@include flexStart(row, flex-start);
 		gap: 5.25rem;
 	}
 

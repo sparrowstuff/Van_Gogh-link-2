@@ -1,0 +1,36 @@
+.custom-travel-checkbox {
+	$root: &;
+
+	&:nth-child(2) {
+		#{$root}__icon {
+			margin-left: 0.31rem;
+		}
+	}
+
+	&__label {
+		width: 2.75rem;
+		height: 2.75rem;
+		background-color: $white;
+		@include flexCenter(row, center, center);
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	&__icon {
+		opacity: 0.15;
+		scale: 1.1;
+		transition: opacity $transition-300;
+	}
+
+	&__input {
+		z-index: 10;
+	}
+
+	&__input:checked {
+		+ #{$root}__label {
+			#{$root}__icon {
+				opacity: 1;
+			}
+		}
+	}
+}

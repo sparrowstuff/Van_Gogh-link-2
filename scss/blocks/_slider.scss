@@ -1,0 +1,116 @@
+.slider {
+	@include flexCenter(column, center, unset);
+	gap: 1.93rem;
+
+	&__label {
+		width: 100%;
+		background-color: $white;
+		height: 2.87rem;
+		margin-top: 1.25rem;
+		@include flexCenter(row, center, center);
+		gap: 3.87rem;
+		outline: 1px solid $slider-border;
+		border-radius: 0.25rem;
+
+		position: relative;
+
+		&::after {
+			content: '';
+			height: 100%;
+			width: 1px;
+			background-color: $slider-border;
+			position: absolute;
+			top: 0;
+			left: 50%;
+		}
+
+		&::before {
+			content: '';
+			background-color: $white;
+			width: 1.25rem;
+			height: 0.87rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			z-index: 4;
+		}
+	}
+
+	&__current-number,
+	&__max-number {
+		font-size: $px-20;
+		line-height: 100%;
+		letter-spacing: 0.04em;
+	}
+
+	&__max-number {
+		margin-left: 0.62rem;
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 1.25rem;
+			height: 1px;
+			background-color: $slider-border;
+			position: absolute;
+			top: 50%;
+			left: -107%;
+			z-index: 5;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__level-slider {
+		display: block;
+		width: 100%;
+		height: 20px;
+		z-index: 10;
+
+		position: relative;
+
+		&::before {
+			content: '';
+			width: 0.81rem;
+			height: 0.81rem;
+			background: $blue-deep;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+			pointer-events: none;
+		}
+	}
+
+	.noUi-target {
+		background: $main;
+		height: 0.5rem;
+		border-radius: 0.25rem;
+	}
+
+	.noUi-horizontal {
+		height: 3px;
+	}
+
+	.noUi-horizontal .noUi-handle {
+		border: unset;
+		box-shadow: unset;
+		width: 0.81rem;
+		height: 0.81rem;
+		background: $blue-deep;
+		border-radius: 50%;
+		top: -0.3rem;
+		right: 0;
+	}
+
+	.noUi-connect {
+		background: white;
+		opacity: 0.8;
+	}
+
+	.noUi-handle:before,
+	.noUi-handle:after {
+		display: none;
+	}
+}

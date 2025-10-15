@@ -1,0 +1,53 @@
+.accordion {
+	width: 100%;
+
+	$root: &;
+
+	&__summary {
+		width: 100%;
+		list-style: none;
+		cursor: pointer;
+
+		@include flexCenter(row, center, space-between);
+		gap: 0.62rem;
+
+		&:hover,
+		&:focus-visible {
+			#{$root}__stripe-down {
+				transform: translateY(0.18rem);
+			}
+		}
+	}
+
+	&__summary-title {
+		font-size: $px-20;
+		line-height: 110%;
+		text-transform: uppercase;
+	}
+
+	&__stripe-down {
+		transition: transform $transition-300;
+	}
+
+	&:open {
+		#{$root}__stripe-down {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__menu {
+		@include flexStart(column);
+		gap: 1rem;
+		margin-top: 1.43rem;
+		margin-bottom: 0.8rem;
+	}
+
+	&__travel-menu {
+		@include flexStart(row);
+		margin-top: 1.43rem;
+		margin-bottom: 0.8rem;
+	}
+
+	// &__slider-menu {
+	// }
+}

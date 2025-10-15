@@ -56,4 +56,8 @@
 		padding: 1.06rem 2.62rem;
 		background-color: $white;
 	}
+
+	&--clicked {
+		background-color: $pink-light;
+	}
 }

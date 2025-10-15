@@ -1,0 +1,45 @@
+.custom-checkbox {
+	width: 100%;
+	padding: 0 0 0 2.31rem;
+	position: relative;
+	$root: &;
+
+	&__input {
+		z-index: 10;
+	}
+
+	&__label {
+		cursor: pointer;
+
+		&::before {
+			content: '';
+			width: 1.5rem;
+			height: 1.5rem;
+			border-radius: 0.25rem;
+			background-color: $white;
+			position: absolute;
+			top: 50%;
+			left: 0%;
+			z-index: 2;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__text {
+		font-weight: 400;
+		font-size: $px-20;
+		line-height: 100%;
+		color: $black;
+	}
+
+	&__checked-icon {
+		position: absolute;
+		top: 50%;
+		left: 4%;
+		transform: translateY(-50%);
+		z-index: 5;
+		opacity: 0;
+
+		transition: opacity $transition-300;
+	}
+}
