@@ -1,0 +1,16 @@
+.container {
+	max-width: 90rem;
+	width: 100%;
+	padding: 0 4rem 0 3.43rem;
+	margin: 0 auto;
+
+	@media (max-width: $px-768) {
+		max-width: 48rem;
+		padding: 0 2.5rem;
+	}
+
+	@media (max-width: $px-320) {
+		max-width: 20rem;
+		padding: 0 1.56rem;
+	}
+}
