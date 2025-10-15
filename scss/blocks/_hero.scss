@@ -1,0 +1,13 @@
+.hero {
+	padding: 0 0 6.25rem;
+
+	&__main-wrapper {
+		@include flexCenter(row, center, unset);
+		gap: 5.25rem;
+	}
+
+	&__catalog {
+		@include flexCenter(column, center, unset);
+		gap: 1.87rem;
+	}
+}
