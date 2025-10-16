@@ -1451,6 +1451,11 @@ footer {
     padding: 0 0 0 1.7rem;
   }
 }
+@media (max-width: 29.37rem) {
+  .custom-checkbox {
+    width: 10.3rem;
+  }
+}
 .custom-checkbox__input {
   z-index: 10;
 }
@@ -1495,6 +1500,13 @@ footer {
   z-index: 5;
   opacity: 0;
   transition: opacity ease-in 0.3s;
+}
+@media (max-width: 29.37rem) {
+  .custom-checkbox__checked-icon {
+    width: 0.51rem;
+    height: 0.51rem;
+    left: 4%;
+  }
 }
 
 .custom-travel-checkbox:nth-child(2) .custom-travel-checkbox__icon {

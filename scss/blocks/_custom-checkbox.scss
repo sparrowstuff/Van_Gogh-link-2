@@ -20,6 +20,10 @@
 		padding: 0 0 0 1.7rem;
 	}
 
+	@media (max-width: 29.37rem) {
+		width: 10.3rem;
+	}
+
 	&__input {
 		z-index: 10;
 	}
@@ -67,5 +71,12 @@
 		opacity: 0;
 
 		transition: opacity $transition-300;
+
+		@media (max-width: 29.37rem) {
+			width: 0.51rem;
+			height: 0.51rem;
+
+			left: 4%;
+		}
 	}
 }
