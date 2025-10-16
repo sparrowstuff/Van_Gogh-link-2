@@ -523,7 +523,7 @@ footer {
     height: 1px;
     background-color: #edeff6;
     position: absolute;
-    bottom: 33%;
+    bottom: 33.5%;
     left: 0;
   }
 }
@@ -627,6 +627,7 @@ footer {
     grid-template-columns: unset;
     -moz-column-gap: unset;
          column-gap: unset;
+    min-height: 26rem;
   }
 }
 .card__picture {
@@ -711,7 +712,7 @@ footer {
   .card__hashtags {
     position: absolute;
     top: 24%;
-    left: 10%;
+    left: 7%;
   }
 }
 .card__hashtag {
