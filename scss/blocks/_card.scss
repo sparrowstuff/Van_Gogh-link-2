@@ -13,6 +13,135 @@
 
 	position: relative;
 
+	&::before {
+		content: '';
+		width: 0.5rem;
+		height: 0.45rem;
+		display: block;
+		border-radius: 50%;
+		background-color: $main;
+		position: absolute;
+		top: 21%;
+		left: 34%;
+		transform: translateY(-50%);
+
+		@media (max-width: 86.25rem) {
+			left: 60%;
+		}
+
+		@media (max-width: 64rem) {
+			left: 65%;
+			top: 16%;
+		}
+
+		@media (max-width: 56.25rem) {
+			left: 74%;
+		}
+
+		@media (max-width: 43.75rem) {
+			top: 5%;
+			left: unset;
+			right: 5%;
+		}
+	}
+
+	&::after {
+		display: none;
+
+		@media (max-width: 29.37rem) {
+			display: block;
+			content: '';
+			width: 100%;
+			height: 1px;
+			background-color: $background;
+			position: absolute;
+			bottom: 33%;
+			left: 0;
+		}
+	}
+
+	&:nth-child(1) {
+		#{$root}__travel-logo-background:nth-child(n + 2) {
+			opacity: 0.15;
+		}
+
+		#{$root}__level {
+			background: conic-gradient($orange 0% 99%, $white 99% 100%);
+		}
+
+		&::before {
+			@media (max-width: 48rem) {
+				background-color: $orange;
+			}
+		}
+	}
+
+	&:nth-child(2) {
+		#{$root}__travel-logo-background:nth-child(3) {
+			opacity: 0.15;
+		}
+
+		#{$root}__level {
+			background: conic-gradient($orange 0% 80%, $white 80% 100%);
+		}
+
+		&::before {
+			background-color: $orange;
+
+			@media (max-width: 64rem) {
+				background-color: $salad;
+			}
+
+			@media (max-width: 48rem) {
+				background-color: $orange;
+			}
+		}
+	}
+
+	&:nth-child(3) {
+		#{$root}__travel-logo-background:nth-child(even) {
+			opacity: 0.15;
+		}
+
+		#{$root}__level {
+			background: conic-gradient($orange 0% 25%, $white 25% 100%);
+		}
+
+		&::before {
+			background-color: $orange;
+
+			@media (max-width: 64rem) {
+				background-color: $salad;
+			}
+
+			@media (max-width: 48rem) {
+				background-color: $orange;
+			}
+		}
+	}
+
+	&:nth-child(4) {
+		#{$root}__travel-logo-background:nth-child(n + 3) {
+			opacity: 0.15;
+		}
+
+		#{$root}__level {
+			background: conic-gradient($orange 0% 50%, $white 50% 100%);
+		}
+
+		&::before {
+			background-color: $salad;
+
+			@media (max-width: 64rem) {
+				background-color: $salad;
+			}
+
+			@media (max-width: 48rem) {
+				background-color: $orange;
+			}
+		}
+	}
+
 	@media (max-width: 86.25rem) {
 		min-width: unset;
 	}
@@ -22,22 +151,6 @@
 		// column-gap: 1.81rem;
 		column-gap: 4vw;
 		max-height: 20.81rem;
-	}
-
-	&:nth-child(1) {
-		#{$root}__travel-logo:nth-child(n + 2) {
-			opacity: 0.15;
-		}
-
-		#{$root}__level {
-			background: conic-gradient($orange 0% 99%, $white 99% 100%);
-		}
-
-		#{$root}__title::before {
-			@media (max-width: 48rem) {
-				background-color: $orange;
-			}
-		}
 	}
 
 	@media (max-width: 43.75rem) {
@@ -55,66 +168,6 @@
 		row-gap: 1rem;
 		grid-template-columns: unset;
 		column-gap: unset;
-	}
-
-	&:nth-child(2) {
-		#{$root}__travel-logo:nth-child(3) {
-			opacity: 0.15;
-		}
-
-		#{$root}__level {
-			background: conic-gradient($orange 0% 80%, $white 80% 100%);
-		}
-
-		#{$root}__title::before {
-			@media (max-width: 64rem) {
-				background-color: $salad;
-			}
-
-			@media (max-width: 48rem) {
-				background-color: $orange;
-			}
-		}
-	}
-
-	&:nth-child(3) {
-		#{$root}__travel-logo:nth-child(even) {
-			opacity: 0.15;
-		}
-
-		#{$root}__level {
-			background: conic-gradient($orange 0% 25%, $white 25% 100%);
-		}
-
-		#{$root}__title::before {
-			@media (max-width: 64rem) {
-				background-color: $salad;
-			}
-
-			@media (max-width: 48rem) {
-				background-color: $orange;
-			}
-		}
-	}
-
-	&:nth-child(4) {
-		#{$root}__travel-logo:nth-child(n + 3) {
-			opacity: 0.15;
-		}
-
-		#{$root}__level {
-			background: conic-gradient($orange 0% 50%, $white 50% 100%);
-		}
-
-		#{$root}__title::before {
-			@media (max-width: 64rem) {
-				background-color: $salad;
-			}
-
-			@media (max-width: 48rem) {
-				background-color: $orange;
-			}
-		}
 	}
 
 	&__picture {
@@ -183,38 +236,15 @@
 		font-size: $px-30;
 		line-height: 100%;
 
-		position: relative;
-
-		&::before {
-			content: '';
-			width: 0.5rem;
-			height: 0.45rem;
-			display: block;
-			border-radius: 50%;
-			background-color: $main;
-			position: absolute;
-			top: 50%;
-			left: -13%;
-			transform: translateY(-50%);
-
-			@media (max-width: 86.25rem) {
-				left: 100%;
-			}
-
-			@media (max-width: 43.75rem) {
-				top: 5%;
-				left: unset;
-				right: 5%;
-			}
-		}
-
 		@media (max-width: 43.75rem) {
 			font-size: $px-20;
-			position: static;
 		}
 
 		@media (max-width: 29.37rem) {
 			max-width: 4.87rem;
+			position: absolute;
+			top: 0.87rem;
+			left: 6.5rem;
 		}
 	}
 
@@ -226,8 +256,8 @@
 
 		@media (max-width: 29.37rem) {
 			position: absolute;
-			top: 28%;
-			left: 6%;
+			top: 24%;
+			left: 10%;
 		}
 	}
 
@@ -332,7 +362,7 @@
 				left: 0;
 
 				@media (max-width: 29.37rem) {
-					top: 3%;
+					top: -6%;
 				}
 			}
 
@@ -349,9 +379,9 @@
 				z-index: 5;
 
 				@media (max-width: 29.37rem) {
-					top: -5%;
+					top: -17%;
 					padding: 0 0.3rem 0 0.3rem;
-					left: -1%;
+					left: 1%;
 				}
 			}
 		}
@@ -366,6 +396,7 @@
 		@media (max-width: 29.37rem) {
 			flex-direction: column;
 			height: unset;
+			margin-bottom: 1.37rem;
 		}
 	}
 
@@ -385,6 +416,10 @@
 
 		@media (max-width: 43.75rem) {
 			margin-top: unset;
+		}
+
+		@media (max-width: 29.37rem) {
+			gap: 1.2rem;
 		}
 	}
 
@@ -438,18 +473,47 @@
 		@media (max-width: 43.75rem) {
 			flex-direction: row;
 		}
+
+		@media (max-width: 29.37rem) {
+			position: relative;
+
+			&::before {
+				content: 'транспорт:';
+				font-size: 0.93rem;
+				line-height: 106%;
+				color: #444444;
+				top: -95%;
+				left: 3%;
+				opacity: 1;
+				height: unset;
+				z-index: 2;
+				padding: 0 0.62rem 0 0.3rem;
+				background-color: #ffffff;
+				width: unset;
+				position: absolute;
+			}
+		}
 	}
 
 	&__travel-logo {
-		// position: relative;
+		width: 1.37rem;
+		height: 1.37rem;
 
 		@media (max-width: 29.37rem) {
 			width: 0.81rem;
 			height: 1rem;
+		}
+	}
 
+	&__travel-logo-background {
+		@media (max-width: 43.75rem) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 2rem;
+			height: 2rem;
 			background-color: $background;
 			border-radius: 50%;
-			// padding: 0.5rem;
 		}
 	}
 
@@ -507,10 +571,13 @@
 				font-size: $px-15;
 				line-height: 106%;
 				color: $grey-deep;
-				top: -48%;
+				top: -53%;
 				opacity: 1;
 				height: unset;
+				z-index: 2;
+				padding: 0 0.62rem 0 0.87rem;
 				background-color: $white;
+				width: unset;
 			}
 		}
 	}

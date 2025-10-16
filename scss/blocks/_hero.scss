@@ -8,6 +8,10 @@
 		@media (max-width: 86.25rem) {
 			flex-direction: column-reverse;
 		}
+
+		@media (max-width: 43.75rem) {
+			gap: 1.5rem;
+		}
 	}
 
 	&__catalog {
@@ -20,6 +24,10 @@
 
 		@media (max-width: 64rem) {
 			gap: 2.5rem;
+		}
+
+		@media (max-width: 29.37rem) {
+			gap: 0.6rem;
 		}
 	}
 }
