@@ -54,7 +54,6 @@ function sliderInit() {
 function changeAccordion() {
 	function accordionOpen() {
 		const details = document.querySelectorAll('.accordion')
-		// console.log(details)
 
 		const windowWidth = window.innerWidth
 
