@@ -23,6 +23,12 @@
 		padding: 1rem 2.3rem 1rem 2.3rem;
 	}
 
+	@media (max-width: 31.25rem) {
+		padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+
+		font-size: $px-17;
+	}
+
 	&--like {
 		background-color: $grey;
 		display: flex;
@@ -59,6 +65,10 @@
 	&--white {
 		padding: 1.06rem 2.62rem;
 		background-color: $white;
+
+		@media (max-width: 31.25rem) {
+			padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+		}
 	}
 
 	&--clicked {

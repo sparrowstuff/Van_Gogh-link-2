@@ -35,7 +35,6 @@ function checkCheckboxes() {
 function sliderInit() {
 	const slider = document.getElementById('level-slider')
 	let currentValue = document.querySelector('.slider__current-number')
-	let maxValue = document.querySelector('.slider__max-number')
 
 	noUiSlider.create(slider, {
 		start: 30,
@@ -60,7 +59,7 @@ function changeAccordion() {
 		const windowWidth = window.innerWidth
 
 		details.forEach(block => {
-			if (windowWidth >= 500 && windowWidth <= 1378) {
+			if (windowWidth >= 753 && windowWidth <= 1378) {
 				block.setAttribute('open', '')
 			} else {
 				block.removeAttribute('open')

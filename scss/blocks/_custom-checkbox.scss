@@ -12,6 +12,14 @@
 		width: 10.3rem;
 	}
 
+	@media (max-width: 47.06rem) {
+		width: fit-content;
+	}
+
+	@media (max-width: 31.25rem) {
+		padding: 0 0 0 1.7rem;
+	}
+
 	&__input {
 		z-index: 10;
 	}
@@ -30,6 +38,11 @@
 			left: 0%;
 			z-index: 2;
 			transform: translateY(-50%);
+
+			@media (max-width: 31.25rem) {
+				width: 1.12rem;
+				height: 1.12rem;
+			}
 		}
 	}
 
@@ -38,6 +51,11 @@
 		font-size: $px-20;
 		line-height: 100%;
 		color: $black;
+
+		@media (max-width: 31.25rem) {
+			font-size: $px-15;
+			line-height: 133%;
+		}
 	}
 
 	&__checked-icon {

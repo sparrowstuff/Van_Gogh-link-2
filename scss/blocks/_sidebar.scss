@@ -19,6 +19,12 @@
 		gap: 2.4rem;
 	}
 
+	@media (max-width: 31.25rem) {
+		padding: 1.56rem 1.5rem 1.62rem 1.62rem;
+		gap: unset;
+		min-height: 39.25rem;
+	}
+
 	&__title {
 		font-weight: 700;
 		font-size: $px-30;
@@ -31,6 +37,11 @@
 
 		@media (max-width: 64rem) {
 			letter-spacing: 0.04em;
+		}
+
+		@media (max-width: 31.25rem) {
+			font-size: $px-22;
+			margin-bottom: 1.5rem;
 		}
 	}
 
@@ -47,6 +58,16 @@
 
 		@media (max-width: 64rem) {
 			gap: unset;
+		}
+
+		@media (max-width: 47.06rem) {
+			gap: 1.6rem;
+		}
+
+		@media (max-width: 31.25rem) {
+			padding: 0.75rem 0 0.8rem;
+			gap: 0.4rem;
+			border-bottom: unset;
 		}
 	}
 
