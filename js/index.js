@@ -6,4 +6,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	components.checkCheckboxes()
 
 	components.sliderInit()
+
+	components.changeAccordion()
 })

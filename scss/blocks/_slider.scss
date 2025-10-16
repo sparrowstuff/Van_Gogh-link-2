@@ -2,6 +2,18 @@
 	@include flexCenter(column, center, unset);
 	gap: 1.93rem;
 
+	@media (max-width: 86.25rem) {
+		flex-direction: row-reverse;
+	}
+
+	@media (max-width: 64rem) {
+		gap: 3.7rem;
+	}
+
+	@media (max-width: 31.25rem) {
+		flex-direction: column;
+	}
+
 	&__label {
 		width: 100%;
 		background-color: $white;
@@ -35,6 +47,19 @@
 			transform: translate(-50%, -50%);
 			z-index: 4;
 		}
+
+		@media (max-width: 86.25rem) {
+			margin-top: unset;
+		}
+
+		@media (max-width: 64rem) {
+			width: 33%;
+			gap: 1.8rem;
+		}
+
+		@media (max-width: 31.25rem) {
+			margin-top: 1.25rem;
+		}
 	}
 
 	&__current-number,
@@ -58,6 +83,14 @@
 			left: -107%;
 			z-index: 5;
 			transform: translateY(-50%);
+
+			@media (max-width: 86.25rem) {
+				left: -125%;
+			}
+
+			@media (max-width: 64rem) {
+				left: -78%;
+			}
 		}
 	}
 
@@ -91,6 +124,14 @@
 
 	.noUi-horizontal {
 		height: 3px;
+
+		@media (max-width: 86.25rem) {
+			width: 20.6rem;
+		}
+
+		@media (max-width: 31.25rem) {
+			width: unset;
+		}
 	}
 
 	.noUi-horizontal .noUi-handle {

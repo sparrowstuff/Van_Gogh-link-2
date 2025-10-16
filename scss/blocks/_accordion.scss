@@ -3,6 +3,35 @@
 
 	$root: &;
 
+	@media (max-width: 86.25rem) {
+		@include flexCenter(row, center, unset);
+
+		&:nth-child(4) {
+			#{$root}__summary {
+				width: unset;
+				margin-right: 1.12rem;
+			}
+
+			#{$root}__summary-title {
+				margin-top: 0.62rem;
+			}
+		}
+
+		@media (max-width: 64rem) {
+			&:nth-child(2) {
+				margin-top: 1.8rem;
+			}
+
+			&:nth-child(3) {
+				margin-top: 1.8rem;
+			}
+
+			&:nth-child(4) {
+				margin-top: unset;
+			}
+		}
+	}
+
 	&__summary {
 		width: 100%;
 		list-style: none;
@@ -17,16 +46,39 @@
 				transform: translateY(0.18rem);
 			}
 		}
+
+		@media (max-width: 86.25rem) {
+		}
 	}
 
 	&__summary-title {
 		font-size: $px-20;
 		line-height: 110%;
 		text-transform: uppercase;
+
+		@media (max-width: 86.25rem) {
+			position: relative;
+
+			&::after {
+				content: ':';
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: -0.37rem;
+			}
+		}
 	}
 
 	&__stripe-down {
 		transition: transform $transition-300;
+
+		@media (max-width: 86.25rem) {
+			display: none;
+		}
+
+		@media (max-width: 31.25rem) {
+			display: block;
+		}
 	}
 
 	&:open {
@@ -37,9 +89,20 @@
 
 	&__menu {
 		@include flexStart(column);
-		gap: 1rem;
-		margin-top: 1.43rem;
+		gap: 1.3rem;
+		margin-top: 1.6rem;
 		margin-bottom: 0.8rem;
+
+		@media (max-width: 86.25rem) {
+			flex-direction: row;
+			align-items: center;
+			margin-top: unset;
+			margin-bottom: unset;
+		}
+
+		@media (max-width: 64rem) {
+			gap: unset;
+		}
 	}
 
 	&__travel-menu {

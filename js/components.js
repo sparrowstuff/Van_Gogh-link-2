@@ -52,4 +52,25 @@ function sliderInit() {
 	})
 }
 
-export { likeBtnClick, checkCheckboxes, sliderInit }
+function changeAccordion() {
+	function accordionOpen() {
+		const details = document.querySelectorAll('.accordion')
+		// console.log(details)
+
+		const windowWidth = window.innerWidth
+
+		details.forEach(block => {
+			if (windowWidth >= 500 && windowWidth <= 1378) {
+				block.setAttribute('open', '')
+			} else {
+				block.removeAttribute('open')
+			}
+		})
+	}
+
+	accordionOpen()
+
+	window.addEventListener('resize', accordionOpen)
+}
+
+export { likeBtnClick, checkCheckboxes, sliderInit, changeAccordion }

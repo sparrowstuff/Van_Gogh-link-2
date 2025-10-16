@@ -8,20 +8,53 @@
 	@include flexCenter(column, center, unset);
 	gap: 2.12rem;
 
+	@media (max-width: 86.25rem) {
+		width: 100%;
+		align-items: flex-start;
+		min-height: 34.37rem;
+	}
+
+	@media (max-width: 64rem) {
+		padding: 2.2rem 3rem 2rem 2.2rem;
+		gap: 2.4rem;
+	}
+
 	&__title {
 		font-weight: 700;
 		font-size: $px-30;
 		line-height: 100%;
 		max-width: 11.87rem;
+
+		@media (max-width: 86.25rem) {
+			max-width: unset;
+		}
+
+		@media (max-width: 64rem) {
+			letter-spacing: 0.04em;
+		}
 	}
 
 	&__accordion-wrapper {
 		@include flexStart();
 		gap: 1.18rem;
 		width: 100%;
+
+		@media (max-width: 86.25rem) {
+			border-top: 1px solid $yellow-border;
+			border-bottom: 1px solid $yellow-border;
+			padding: 2.12rem 0 2.31rem 0;
+		}
+
+		@media (max-width: 64rem) {
+			gap: unset;
+		}
 	}
 
 	&__btn {
 		margin-top: auto;
+
+		@media (max-width: 86.25rem) {
+			width: 100%;
+		}
 	}
 }

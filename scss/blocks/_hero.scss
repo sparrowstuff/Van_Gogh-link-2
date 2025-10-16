@@ -3,11 +3,23 @@
 
 	&__main-wrapper {
 		@include flexStart(row, flex-start);
-		gap: 5.25rem;
+		gap: 5vw;
+
+		@media (max-width: 86.25rem) {
+			flex-direction: column-reverse;
+		}
 	}
 
 	&__catalog {
 		@include flexCenter(column, center, unset);
 		gap: 1.87rem;
+
+		@media (max-width: 86.25rem) {
+			width: 100%;
+		}
+
+		@media (max-width: 64rem) {
+			gap: 2.5rem;
+		}
 	}
 }

@@ -4,6 +4,14 @@
 	position: relative;
 	$root: &;
 
+	@media (max-width: 86.25rem) {
+		width: 9.37rem;
+	}
+
+	@media (max-width: 64rem) {
+		width: 10.3rem;
+	}
+
 	&__input {
 		z-index: 10;
 	}

@@ -19,6 +19,10 @@
 		background-color: $orange;
 	}
 
+	@media (max-width: 64rem) {
+		padding: 1rem 2.3rem 1rem 2.3rem;
+	}
+
 	&--like {
 		background-color: $grey;
 		display: flex;
