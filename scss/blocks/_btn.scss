@@ -43,6 +43,16 @@
 		&:focus-visible {
 			background-color: $pink-light;
 		}
+
+		@media (max-width: 43.75rem) {
+			width: 1.87rem;
+			height: 1.87rem;
+
+			#{$root}__like-icon {
+				width: 0.76rem;
+				height: 0.76rem;
+			}
+		}
 	}
 
 	&__like-icon {
@@ -60,6 +70,11 @@
 		opacity: 0;
 		z-index: 2;
 		transition: opacity $transition-300;
+
+		@media (max-width: 43.75rem) {
+			width: 0.76rem;
+			height: 0.76rem;
+		}
 	}
 
 	&--white {

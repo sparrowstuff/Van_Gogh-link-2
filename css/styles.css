@@ -414,7 +414,7 @@ footer {
     padding: 0 2.5rem;
   }
 }
-@media (max-width: 20rem) {
+@media (max-width: 20.1rem) {
   .container {
     max-width: 20rem;
     padding: 0 1.56rem;
@@ -491,6 +491,27 @@ footer {
     background-color: #ff8d30;
   }
 }
+@media (max-width: 43.75rem) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+    gap: unset;
+    padding: 0.87rem 1.25rem 1.43rem 1.12rem;
+    row-gap: 2rem;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+    grid-template-rows: 1fr;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+  }
+}
+@media (max-width: 29.37rem) {
+  .card {
+    row-gap: 1rem;
+    grid-template-columns: unset;
+    -moz-column-gap: unset;
+         column-gap: unset;
+  }
+}
 .card:nth-child(2) .card__travel-logo:nth-child(3) {
   opacity: 0.15;
 }
@@ -552,6 +573,14 @@ footer {
     grid-row: 1/2;
   }
 }
+@media (max-width: 29.37rem) {
+  .card__picture {
+    width: 4.37rem;
+    height: 4.37rem;
+    border-radius: 50%;
+    margin-bottom: 3.87rem;
+  }
+}
 .card__inner-info {
   display: flex;
   flex-direction: column;
@@ -608,17 +637,49 @@ footer {
     left: 100%;
   }
 }
+@media (max-width: 43.75rem) {
+  .card__title::before {
+    top: 5%;
+    left: unset;
+    right: 5%;
+  }
+}
+@media (max-width: 43.75rem) {
+  .card__title {
+    font-size: 1.25rem;
+    position: static;
+  }
+}
+@media (max-width: 29.37rem) {
+  .card__title {
+    max-width: 4.87rem;
+  }
+}
 .card__hashtags {
   display: flex;
   gap: 2px;
   max-width: 13.06rem;
   flex-wrap: wrap;
 }
+@media (max-width: 29.37rem) {
+  .card__hashtags {
+    position: absolute;
+    top: 28%;
+    left: 6%;
+  }
+}
 .card__hashtag {
   color: #000000;
   font-weight: 400;
   font-size: 1.25rem;
   line-height: 115%;
+}
+@media (max-width: 43.75rem) {
+  .card__hashtag {
+    color: #444444;
+    font-size: 0.93rem;
+    line-height: 120%;
+  }
 }
 .card__btn-block {
   display: flex;
@@ -633,6 +694,37 @@ footer {
     margin-top: 1.06rem;
   }
 }
+@media (max-width: 43.75rem) {
+  .card__btn-block {
+    position: absolute;
+    top: 10rem;
+    left: 12rem;
+    z-index: 10;
+  }
+}
+@media (max-width: 29.37rem) {
+  .card__btn-block {
+    top: 2.4rem;
+    left: 4rem;
+  }
+}
+@media (max-width: 43.75rem) {
+  .card__take-btn {
+    display: none;
+  }
+}
+.card__take-btn--mobile {
+  display: none;
+}
+@media (max-width: 43.75rem) {
+  .card__take-btn--mobile {
+    display: flex;
+    width: 100%;
+    grid-column: span 2;
+    justify-content: center;
+    grid-row: 4;
+  }
+}
 .card__like-menu {
   display: flex;
   flex-direction: row;
@@ -645,6 +737,12 @@ footer {
   line-height: 100%;
   text-transform: uppercase;
   margin-left: 0.43rem;
+}
+@media (max-width: 43.75rem) {
+  .card__likes-count {
+    font-size: 0.87rem;
+    line-height: 114%;
+  }
 }
 .card__location-wrapper {
   display: flex;
@@ -677,6 +775,13 @@ footer {
     top: -63%;
     left: 0;
   }
+}
+@media (max-width: 64rem) and (max-width: 29.37rem) {
+  .card__location-wrapper::after {
+    top: 3%;
+  }
+}
+@media (max-width: 64rem) {
   .card__location-wrapper::before {
     content: "хочет посетить:";
     font-size: 0.93rem;
@@ -685,10 +790,28 @@ footer {
     padding: 0 0.75rem 0 0.62rem;
     background-color: #ffffff;
     position: absolute;
-    top: -63%;
     top: -104%;
     left: 5%;
     z-index: 5;
+  }
+}
+@media (max-width: 64rem) and (max-width: 29.37rem) {
+  .card__location-wrapper::before {
+    top: -5%;
+    padding: 0 0.3rem 0 0.3rem;
+    left: -1%;
+  }
+}
+@media (max-width: 43.75rem) {
+  .card__location-wrapper {
+    grid-column: span 2;
+    gap: 0.62rem;
+  }
+}
+@media (max-width: 29.37rem) {
+  .card__location-wrapper {
+    flex-direction: column;
+    height: unset;
   }
 }
 .card__location {
@@ -704,10 +827,25 @@ footer {
     margin-top: 0.62rem;
   }
 }
+.card__location .card__location-icon {
+  width: 1.62rem;
+  height: 1.12rem;
+}
+@media (max-width: 43.75rem) {
+  .card__location {
+    margin-top: unset;
+  }
+}
 .card__location-text {
   font-size: 1.25rem;
   line-height: 100%;
   text-transform: uppercase;
+}
+@media (max-width: 43.75rem) {
+  .card__location-text {
+    font-size: 0.93rem;
+    line-height: 106%;
+  }
 }
 .card__travel-block {
   display: flex;
@@ -727,6 +865,15 @@ footer {
     margin-left: auto;
   }
 }
+@media (max-width: 43.75rem) {
+  .card__travel-block {
+    grid-row: 3;
+    grid-column: span 2;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
 .card__icons-wrapper {
   display: flex;
   flex-direction: row;
@@ -739,6 +886,19 @@ footer {
     flex-direction: column;
   }
 }
+@media (max-width: 43.75rem) {
+  .card__icons-wrapper {
+    flex-direction: row;
+  }
+}
+@media (max-width: 29.37rem) {
+  .card__travel-logo {
+    width: 0.81rem;
+    height: 1rem;
+    background-color: #edeff6;
+    border-radius: 50%;
+  }
+}
 .card__level {
   display: flex;
   flex-direction: column;
@@ -749,6 +909,12 @@ footer {
   height: 3.75rem;
   border-radius: 50%;
   position: relative;
+}
+@media (max-width: 43.75rem) {
+  .card__level {
+    width: 2.81rem;
+    height: 2.81rem;
+  }
 }
 .card__level::before {
   content: "";
@@ -768,6 +934,14 @@ footer {
     left: 2px;
   }
 }
+@media (max-width: 43.75rem) {
+  .card__level::before {
+    width: 2.4rem;
+    height: 2.4rem;
+    top: 3px;
+    left: 3.3px;
+  }
+}
 .card__level::after {
   content: "";
   width: 2.06rem;
@@ -776,6 +950,18 @@ footer {
   background-color: #000000;
   position: absolute;
   top: 59%;
+}
+@media (max-width: 43.75rem) {
+  .card__level::after {
+    content: "левел:";
+    font-size: 0.93rem;
+    line-height: 106%;
+    color: #444444;
+    top: -48%;
+    opacity: 1;
+    height: unset;
+    background-color: #ffffff;
+  }
 }
 .card__level-number {
   font-weight: 700;
@@ -789,6 +975,11 @@ footer {
   color: #000000;
   opacity: 0.4;
   z-index: 5;
+}
+@media (max-width: 43.75rem) {
+  .card__level-unit {
+    display: none;
+  }
 }
 
 .btn {
@@ -830,6 +1021,16 @@ footer {
 .btn--like:hover, .btn--like:focus-visible {
   background-color: #f9eaea;
 }
+@media (max-width: 43.75rem) {
+  .btn--like {
+    width: 1.87rem;
+    height: 1.87rem;
+  }
+  .btn--like .btn__like-icon {
+    width: 0.76rem;
+    height: 0.76rem;
+  }
+}
 .btn__like-icon {
   color: #1d2e5b;
   width: 1.31rem;
@@ -844,6 +1045,12 @@ footer {
   opacity: 0;
   z-index: 2;
   transition: opacity ease-in 0.3s;
+}
+@media (max-width: 43.75rem) {
+  .btn__like-icon-red {
+    width: 0.76rem;
+    height: 0.76rem;
+  }
 }
 .btn--white {
   padding: 1.06rem 2.62rem;
