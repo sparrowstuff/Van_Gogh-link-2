@@ -1,6 +1,6 @@
 .card {
 	background-color: $white;
-	max-height: 17.87rem;
+	// max-height: 17.87rem;
 	border-radius: 1.56rem;
 	display: grid;
 	grid-template-rows: repeat(2, 1fr);
@@ -8,7 +8,7 @@
 	row-gap: 2.2rem;
 	column-gap: 2vw;
 	width: 100%;
-	min-width: 59.37rem;
+	// min-width: 59.37rem;
 	$root: &;
 
 	position: relative;
@@ -142,9 +142,9 @@
 		}
 	}
 
-	@media (max-width: 86.25rem) {
-		min-width: unset;
-	}
+	// @media (max-width: 86.25rem) {
+	// 	min-width: unset;
+	// }
 
 	@media (max-width: 64rem) {
 		padding: 2.18rem 1.56rem 1.56rem 2.18rem;
@@ -166,7 +166,11 @@
 		row-gap: 1rem;
 		grid-template-columns: unset;
 		column-gap: unset;
-		min-height: 26rem;
+		min-height: fit-content;
+	}
+
+	@media (min-width: 125rem) {
+		column-gap: 7vw;
 	}
 
 	&__picture {
@@ -385,6 +389,18 @@
 			flex-direction: column;
 			height: unset;
 			margin-bottom: 1.37rem;
+		}
+	}
+
+	&__location-wrapper--has-many-els {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		margin-top: 1.87rem;
+		margin-bottom: 1.87rem;
+
+		&::before {
+			position: sticky;
 		}
 	}
 

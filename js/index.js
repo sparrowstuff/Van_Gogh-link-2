@@ -8,4 +8,8 @@ window.addEventListener('DOMContentLoaded', () => {
 	components.sliderInit()
 
 	components.changeAccordion()
+
+	window.addEventListener('resize', components.addStylingIfLocationsToMany)
+
+	components.addStylingIfLocationsToMany()
 })

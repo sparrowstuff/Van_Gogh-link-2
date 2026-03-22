@@ -13,4 +13,13 @@
 		max-width: 20rem;
 		padding: 0 1.56rem;
 	}
+
+	@media (min-width: 125rem) {
+		max-width: unset;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: fit-content;
+	}
 }

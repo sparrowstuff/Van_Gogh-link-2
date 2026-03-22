@@ -20,7 +20,7 @@ function checkCheckboxes() {
 	checkboxes.forEach(checkbox => {
 		checkbox.addEventListener('change', () => {
 			const checkIcon = checkbox.parentElement.querySelector(
-				'.custom-checkbox__checked-icon'
+				'.custom-checkbox__checked-icon',
 			)
 			if (checkbox.checked) {
 				checkIcon.style.opacity = '1'
@@ -71,4 +71,30 @@ function changeAccordion() {
 	window.addEventListener('resize', accordionOpen)
 }
 
-export { likeBtnClick, checkCheckboxes, sliderInit, changeAccordion }
+function addStylingIfLocationsToMany() {
+	const allLocationWrappers = document.querySelectorAll(
+		'.card__location-wrapper',
+	)
+
+	const windowInnerWidth = window.innerWidth <= 1024
+
+	allLocationWrappers.forEach(wrapper => {
+		wrapper.classList.remove('card__location-wrapper--has-many-els')
+
+		if (wrapper.childElementCount >= 4 && windowInnerWidth) {
+			wrapper.classList.add('card__location-wrapper--has-many-els')
+			wrapper.style.height = 'unset'
+
+			const card = document.querySelector('.card')
+			card.style.maxHeight = 'unset'
+		}
+	})
+}
+
+export {
+	likeBtnClick,
+	checkCheckboxes,
+	sliderInit,
+	changeAccordion,
+	addStylingIfLocationsToMany,
+}
