@@ -984,8 +984,9 @@ footer {
   }
 }
 .card__travel-logo {
+  aspect-ratio: 16/9;
   width: 1.37rem;
-  height: 1.37rem;
+  height: auto;
 }
 @media (max-width: 29.37rem) {
   .card__travel-logo {
