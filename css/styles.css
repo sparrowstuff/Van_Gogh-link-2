@@ -630,7 +630,7 @@ footer {
     grid-template-columns: unset;
     -moz-column-gap: unset;
          column-gap: unset;
-    min-height: 26rem;
+    min-height: 27rem;
   }
 }
 @media (min-width: 125rem) {
